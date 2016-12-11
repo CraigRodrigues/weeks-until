@@ -111,12 +111,14 @@
       let dateInput = document.getElementById("dateInputField").value.split("-");
       let end = new Date(dateInput[0], dateInput[1], dateInput[2]);
       
-      var oneDay = 60000*60*24;
-      var oneWeek = oneDay * 7;
+      const oneDay = 60000*60*24;
+      const oneWeek = oneDay * 7;
 
       if ((end.getTime() - start.getTime()) >= 0) {
         document.getElementById("weeksOutput").innerHTML = Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!";
-        console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " Weeks Left!");  
+        // console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " Weeks Left!");  
+      } else {
+        document.getElementById("weeksOutput").innerHTML = "Please enter a future date!";
       }
     }
     
