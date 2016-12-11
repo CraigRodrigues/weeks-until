@@ -8,3 +8,7 @@ This is my first app that came directly from my head to reality without a specif
 * Clean up CSS and make it reactive.
 * Work properly with timezones?
 * Replace placeholder text for date input.
+
+**Screenshot**
+
+![Weeks Until](http://i.imgur.com/7D7IUem.png)
