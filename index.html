@@ -10,8 +10,12 @@
   <div class="weeksUntil">
     <h1>Weeks Until!</h1>
   </div>
-  <div class="date"><input id="dateInputField" type="date" /></div>
-  <div class="button"><button type="button" onclick="myFunction()">Submit</button></div>
+  <div class="date">
+    <input id="dateInputField" type="date">
+  </div>
+  <div class="inputButton">
+    <button type="submit" onclick="myFunction()">SUBMIT</button>
+  </div>
   <div class="output"><p id="weeksOutput"></p></div>
 </div>
 
@@ -40,6 +44,56 @@
     font-weight: 100;
   }
   
+  input[type=date] {
+    font-family:'helvetica neue', serif;
+    font-weight: 100;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #999;
+    border-radius: 4px;
+    font-size: 30px;
+    color: #555;
+    text-align: center;
+  }
+  
+  input[type=date]:focus {
+    outline: none;
+    border: 2px solid #888;
+  }
+  
+  button {
+    outline: none;
+    width: 50%;
+    padding: 10px 25px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: lightgray;
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  button:hover {
+    outline: none;
+    transition-duration: 0.25s;
+    background-color: white;
+    color: #999;
+  }
+  
+  .output {
+    margin: 30px
+  }
+  
+  p {
+    height: 50px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 100;
+  }
+  
 </style>
 
 <script>
@@ -62,7 +116,7 @@
 
       if ((end.getTime() - start.getTime()) >= 0) {
         document.getElementById("weeksOutput").innerHTML = Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!";
-        console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!");  
+        console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " Weeks Left!");  
       }
     }
     
