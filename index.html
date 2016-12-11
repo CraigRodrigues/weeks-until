@@ -114,11 +114,9 @@
       const oneDay = 60000*60*24;
       const oneWeek = oneDay * 7;
 
-      if ((end.getTime() - start.getTime()) >= 0) {
-        document.getElementById("weeksOutput").innerHTML = Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!";
-      } else {
-        document.getElementById("weeksOutput").innerHTML = "Please enter a future date!";
-      }
+      (end.getTime() - start.getTime()) >= 0 ?
+        document.getElementById("weeksOutput").innerHTML = Math.ceil((end.getTime() - start.getTime()) / oneWeek) + " weeks left!"
+        : document.getElementById("weeksOutput").innerHTML = "Please enter a future date!";
     }
     
   </script>
