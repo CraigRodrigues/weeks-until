@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weeks Until</title>
+</head>
+<body>
+  <div>
+<div>
+    <h1>Weeks Until!</h1>
+    <h2>Input Date Below</h2>
+    <input id="todaysDate" type="date" />
+    <button type="button" onclick="myFunction()">Submit</button>
+ </div>
+  </div>
+  <style>
+  </style>
+  <script>
+    
+    function myFunction() {
+      console.log(document.getElementById("todaysDate").value);
+      
+      // get current date
+      let today = new Date();
+      let day = today.getDate();
+      let month = today.getMonth()+1; //January is 0!
+      let year = today.getFullYear();
+
+      let start = new Date(year, month, day);
+      
+      let dateInput = document.getElementById("todaysDate").value.split("-");
+      
+      //let end = new Date(2017, 04, 01);
+      let end = new Date(dateInput[0], dateInput[1], dateInput[2]);
+      
+      var oneDay = 60000*60*24;
+      var oneWeek = oneDay * 7;
+
+      if ((end.getTime() - start.getTime()) >= 0)
+        console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!");
+      
+    }
+    
+  </script>
+</body>
+</html>
