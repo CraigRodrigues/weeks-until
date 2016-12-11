@@ -100,7 +100,6 @@
 <script>
     
     function myFunction() {
-      console.log(document.getElementById("dateInputField").value);
       
       // get current date
       let today = new Date();
@@ -117,7 +116,6 @@
 
       if ((end.getTime() - start.getTime()) >= 0) {
         document.getElementById("weeksOutput").innerHTML = Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " weeks left!";
-        // console.log(Math.ceil((end.getTime() - start.getTime()) / (oneWeek)) + " Weeks Left!");  
       } else {
         document.getElementById("weeksOutput").innerHTML = "Please enter a future date!";
       }
