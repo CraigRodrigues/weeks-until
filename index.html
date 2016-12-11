@@ -6,15 +6,39 @@
 </head>
 <body>
 
-<div>
+<div class="main">
+  <div class="weeksUntil">
     <h1>Weeks Until!</h1>
-    <h2>Input Date Below</h2>
-    <input id="dateInputField" type="date" />
-    <button type="button" onclick="myFunction()">Submit</button>
-    <p id="weeksOutput"></p>
+  </div>
+  <div class="date"><input id="dateInputField" type="date" /></div>
+  <div class="button"><button type="button" onclick="myFunction()">Submit</button></div>
+  <div class="output"><p id="weeksOutput"></p></div>
 </div>
 
 <style>
+  
+  body {
+      background: #ADD8E6;
+      background-size:cover;
+      font-family:'helvetica neue', serif;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+  
+  .main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    margin: 20px;
+    font-size: 60px;
+    font-weight: 100;
+  }
   
 </style>
 
