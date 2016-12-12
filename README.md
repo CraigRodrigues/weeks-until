@@ -9,6 +9,7 @@ This is my first app that came directly from my head to reality without a specif
 * Work properly with timezones?
 * Replace placeholder text for date input.
 * Place javaScript and css files outside of html.
+* Fix for Safari.
 
 **Screenshot**
 
